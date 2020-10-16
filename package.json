@@ -13,6 +13,11 @@
     "author": "Apache Cordova Team",
     "license": "Apache-2.0",
     "dependencies": {
+        "cordova-android": "^8.1.0",
+        "cordova-browser": "^6.0.0",
+        "cordova-ios": "^5.1.1",
+        "cordova-plugin-badge": "^0.8.8",
+        "cordova-plugin-device": "^2.0.3",
         "cordova-plugin-inappbrowser": "^4.0.0",
         "cordova-plugin-local-notification": "^0.9.0-beta.2",
         "cordova-plugin-splashscreen": "^6.0.0",
@@ -26,6 +31,11 @@
             "cordova-plugin-splashscreen": {},
             "cordova-plugin-whitelist": {},
             "cordova-plugin-vibration": {}
-        }
+        },
+        "platforms": [
+            "android",
+            "ios",
+            "browser"
+        ]
     }
 }
