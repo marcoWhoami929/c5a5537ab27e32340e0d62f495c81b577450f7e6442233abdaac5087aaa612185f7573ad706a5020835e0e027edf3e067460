@@ -4,8 +4,9 @@
   "name": "FlyTestApp",
   "short_name": "FlyTestApp",
   "version": "com.fly.test",
-  "description": "A sample Apache Cordova application that responds to the deviceready event.",
-  "author": "Apache Cordova Team",
+  "description": "CURSOS DE AVIACIÓN",
+  "author": "Marco Antonio López Pérez",
   "icons": [],
+  "orientation": "landscape",
   "start_url": "index.html"
 }

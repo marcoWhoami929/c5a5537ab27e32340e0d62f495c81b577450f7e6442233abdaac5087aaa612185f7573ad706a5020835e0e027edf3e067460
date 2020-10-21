@@ -2,10 +2,10 @@
 <widget id="com.fly.test" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>FlyTestApp</name>
     <description>
-        A sample Apache Cordova application that responds to the deviceready event.
+       CURSOS DE AVIACIÓN
     </description>
-    <author email="dev@cordova.apache.org" href="http://cordova.io">
-        Apache Cordova Team
+    <author email="mlopez@sfd.com.mx">
+        Marco Antonio López Pérez
     </author>
     <content src="index.html" />
     <access origin="*" />
@@ -15,4 +15,9 @@
     <allow-intent href="sms:*" />
     <allow-intent href="mailto:*" />
     <allow-intent href="geo:*" />
+    <preference name="DisallowOverscroll" value="true" />
+    <preference name="android-targetSdkVersion" value="29" />
+    <preference name="android-minSdkVersion" value="22" />
+    <preference name="android-maxSdkVersion" value="29" />
+    <preference name="orientation" value="landscape" />
 </widget>
