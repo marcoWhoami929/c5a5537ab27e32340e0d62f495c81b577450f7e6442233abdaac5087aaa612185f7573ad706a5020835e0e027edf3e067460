@@ -1,46 +1,102 @@
-/*
- * Licensed to the Apache Software Foundation (ASF) under one
- * or more contributor license agreements.  See the NOTICE file
- * distributed with this work for additional information
- * regarding copyright ownership.  The ASF licenses this file
- * to you under the Apache License, Version 2.0 (the
- * "License"); you may not use this file except in compliance
- * with the License.  You may obtain a copy of the License at
- *
- * http://www.apache.org/licenses/LICENSE-2.0
- *
- * Unless required by applicable law or agreed to in writing,
- * software distributed under the License is distributed on an
- * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
- * KIND, either express or implied.  See the License for the
- * specific language governing permissions and limitations
- * under the License.
- */
-var app = {
-    // Application Constructor
-    initialize: function() {
-        document.addEventListener('deviceready', this.onDeviceReady.bind(this), false);
-    },
 
-    // deviceready Event Handler
-    //
-    // Bind any cordova events here. Common events are:
-    // 'pause', 'resume', etc.
-    onDeviceReady: function() {
-        this.receivedEvent('deviceready');
-    },
+$(document).ready(function(){
 
-    // Update DOM on a Received Event
-    receivedEvent: function(id) {
-        var parentElement = document.getElementById(id);
-        var listeningElement = parentElement.querySelector('.listening');
-        var receivedElement = parentElement.querySelector('.received');
+  /*
+    var url = window.location.pathname;
+    var filename = url.substring(url.lastIndexOf('/') + 1);
+    let indice = filename.indexOf(".");
+    let nombreSection = filename.substring(0, indice);
+    if(nombreSection != "login"){
+      document.getElementById("titleSection").innerHTML = nombreSection.toUpperCase();
+    }else{
 
-        listeningElement.setAttribute('style', 'display:none;');
-        receivedElement.setAttribute('style', 'display:block;');
-
-        console.log('Received Event: ' + id);
     }
-};
+  */
 
-app.initialize();
+})
+$(document).on('ready', function() {
+  
+    $('.field').on('focus', function() {
+      $('body').addClass('is-focus');
+    });
+    
+    $('.field').on('blur', function() {
+      $('body').removeClass('is-focus is-type');
+    });
+    
+    $('.field').on('keydown', function(event) {
+      $('body').addClass('is-type');
+      if((event.which === 8) && $(this).val() === '') {
+        $('body').removeClass('is-type');
+      }
+    });
+    
+  });
+  $(document).ready(function() {
+
+    $('#example-1').progress_fnc();
+    $('#example-2').progress_fnc();
+    $('#example-3').progress_fnc();
+    $('#example-4').progress_fnc();
+    $('#example-5').progress_fnc();
+    $('#example-6').progress_fnc();
+    $('#example-7').progress_fnc();
+    $('#example-8').progress_fnc();
+    $('#example-9').progress_fnc();
+    $('#example-10').progress_fnc();
+    $('#example-11').progress_fnc();
+    $('#example-12').progress_fnc();
+    $('#example-13').progress_fnc();
+  
+    $('.progressStart').on('click', function() {
+      var perent = $(this).closest("div").attr("id");
+      $('#' + perent).progress_fnc({ type: 'start' });
+    });
+  
+    $('.progressReset').on('click', function() {
+      var perent = $(this).closest("div").attr("id");
+      $('#' + perent).progress_fnc({ type: 'reset' });
+    });
+  
+  });
+  
+  
+  (function($) {
+  
+    $.fn.progress_fnc = function(options) {
+      var settings = $.extend({
+        type: 'start'
+      }, options);
+  
+      var div = $(this);
+      var progress = div.find('.cssProgress');
+  
+      progress.each(function() {
+        var self = $(this);
+        var progress_bar = self.find('.cssProgress-bar');
+        var progress_label = self.find('.cssProgress-label, .cssProgress-label2');
+        var progress_value = progress_bar.data('percent');
+        var percentage = parseInt(progress_value, 10) + '%';
+  
+        progress_bar.css({'width': '0%', 'transition': 'none', '-webkit-transition': 'none', '-moz-transition': 'none'});
+  
+        if(settings.type == 'start') {
+  
+          progress_bar.animate({
+            width: percentage
+          }, {
+            duration: 1000,
+            step: function(x) {
+              progress_label.text(Math.round(x) + '%');
+            }
+          });
+  
+        } else if(settings.type == 'reset') {
+          progress_bar.css('width', '0%');
+          progress_label.text('0%');
+        }
+  
+      });
+    }
+  
+  }(jQuery));

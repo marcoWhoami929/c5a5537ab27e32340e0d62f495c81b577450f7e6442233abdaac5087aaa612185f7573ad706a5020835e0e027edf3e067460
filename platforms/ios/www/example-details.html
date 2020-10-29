@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <title>FLY-TEST</title>
+</head>
+
+<body>
+    <div id="wrap">
+        <div id="sidebar">
+            <div class="header">
+                <p class="title">FLY-TEST</p>
+            </div>
+            <div class="content">
+                <ul class="nav">
+                    <li><a href="?"><span class="ico msg"></span>Normal item</a></li>
+                    <li><a href="?" class="active"><span class="ico msg"></span>Active section</a></li>
+                    <li><a href="?"><span class="ico msg"></span>Red circle<span class="info">5</span></a></li>
+                    <li><a href="?"><span class="ico msg"></span>Status indicator <span>On</span></a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="main">
+            <div class="header">
+                <a class="left" href="?">Volver</a>
+                <h1 class="title">Title</h1>
+                <a class="right" href="?">Edit</a>
+            </div>
+            <div class="content" id="content">
+                <h2 class="title">Heading first</h2>
+                <div class="box-white">
+                    <p>Lorem ipsum <span class="detail">Details here</span><span>Dolor</span></p>
+                </div>
+                <h2 class="title2">Heading second</h2>
+                <p>This is a normal paragraph to add any text you like.</p>
+                <div class="box-white">
+                    <p>Parameter <span>Value</span></p>
+                    <p><a href="?">Clickable row<span>Click me <span class="arrow">&gt;</span></span></a></p>
+                    <p>Foo <span>Bar</span></p>
+                    <p>Lorem ipsum <span><a href="?">Click only this</a></span></p>
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Table heading</th>
+                            <th>Tweets</th>
+                            <th>Following</th>
+                            <th>Followers</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><a href="?">@xaviesteve</a></td>
+                            <td><a href="?">Click</a></td>
+                            <td>131</td>
+                            <td>195</td>
+                        </tr>
+                        <tr>
+                            <td>@xaviesteve</td>
+                            <td>622</td>
+                            <td><a href="?">Click</a></td>
+                            <td>195</td>
+                        </tr>
+                        <tr>
+                            <td>@xaviesteve</td>
+                            <td>622</td>
+                            <td>131</td>
+                            <td><a href="?">Click</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p class="note">You can follow me on Twitter for updates on this template at <a href="https://www.twitter.com/xaviesteve">@xaviesteve</a>.</p>
+                <h2 class="title">Heading first</h2>
+                <div class="box-white">
+                    <p class="center">Centered text in a white box</p>
+                </div>
+                <h2 class="title2">Account details</h2>
+                <p>Me got forms too:</p>
+                <div class="box-white">
+                    <p><label for="field1">Apple ID</label><input id="field1" type="text" value="xavi@example.com" /></p>
+                    <p><label for="field2">Password</label><input id="field2" type="password" value="xavixavi" /></p>
+                    <p><label for="field3">Country</label><select id="field3"><option>Spain</option><option>United Kingdom</option></select></p>
+                </div>
+                <p><input type="submit" class="button red" value="Delete Account" /></p>
+            </div>
+        </div>
+
+    </div>
+        <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript" src="js/all.min.js"></script>
+        <script type="text/javascript" src="js/sweetalert.min.js"></script>
+        <script type="text/javascript" src="js/touch-emulator.js"></script>
+        <script>TouchEmulator()</script>
+        <script type="text/javascript" src="js/pulltorefresh.js"></script>
+        <script>
+      /* global PullToRefresh */
+      PullToRefresh.init({
+        mainElement: '#content',
+        onRefresh: function() { alert('refresh') }
+      });
+    </script>
+</body>
+
+</html>

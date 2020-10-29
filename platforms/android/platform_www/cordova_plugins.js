@@ -1,11 +1,11 @@
 cordova.define('cordova/plugin_list', function(require, exports, module) {
   module.exports = [
     {
-      "id": "cordova-plugin-inappbrowser.inappbrowser",
-      "file": "plugins/cordova-plugin-inappbrowser/www/inappbrowser.js",
-      "pluginId": "cordova-plugin-inappbrowser",
+      "id": "cordova-plugin-badge.Badge",
+      "file": "plugins/cordova-plugin-badge/www/badge.js",
+      "pluginId": "cordova-plugin-badge",
       "clobbers": [
-        "cordova.InAppBrowser.open"
+        "cordova.plugins.notification.badge"
       ]
     },
     {
@@ -17,11 +17,11 @@ cordova.define('cordova/plugin_list', function(require, exports, module) {
       ]
     },
     {
-      "id": "cordova-plugin-badge.Badge",
-      "file": "plugins/cordova-plugin-badge/www/badge.js",
-      "pluginId": "cordova-plugin-badge",
+      "id": "cordova-plugin-inappbrowser.inappbrowser",
+      "file": "plugins/cordova-plugin-inappbrowser/www/inappbrowser.js",
+      "pluginId": "cordova-plugin-inappbrowser",
       "clobbers": [
-        "cordova.plugins.notification.badge"
+        "cordova.InAppBrowser.open"
       ]
     },
     {
@@ -60,9 +60,9 @@ cordova.define('cordova/plugin_list', function(require, exports, module) {
     }
   ];
   module.exports.metadata = {
-    "cordova-plugin-inappbrowser": "4.0.0",
-    "cordova-plugin-device": "2.0.3",
     "cordova-plugin-badge": "0.8.8",
+    "cordova-plugin-device": "2.0.3",
+    "cordova-plugin-inappbrowser": "4.0.0",
     "cordova-plugin-local-notification": "0.9.0-beta.2",
     "cordova-plugin-splashscreen": "6.0.0",
     "cordova-plugin-vibration": "3.1.1",

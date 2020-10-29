@@ -2,7 +2,7 @@
 
 platform :ios, '10.0'
 
-target 'C:\xampp\htdocs\fly-test\platforms\ios\FlyTestApp' do
-	project 'C:\xampp\htdocs\fly-test\platforms\ios\FlyTestApp.xcodeproj'
+target 'C:\xampp\htdocs\flight-test\platforms\ios\FLIGHT-TEST' do
+	project 'C:\xampp\htdocs\flight-test\platforms\ios\FLIGHT-TEST.xcodeproj'
 
 end

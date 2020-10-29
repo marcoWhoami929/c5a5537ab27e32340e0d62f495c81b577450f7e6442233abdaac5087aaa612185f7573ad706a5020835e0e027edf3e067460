@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <title>FLIGHT-TEST</title>
+    <script type="text/javascript">
+        var url = window.location.pathname;
+        var filename = url.substring(url.lastIndexOf('/') + 1);
+        if (localStorage.login == "true" && filename == 'login.html') {
+            window.location.href = "index.html";
+        } else if (localStorage.login == null) {
+            window.location.href = "login.html";
+        } else if (localStorage.login == "false" && filename != 'login.html') {
+            window.location.href = "login.html";
+        }
+        </script>
+</head>
+
+<body>
+    <div id="wrap">
+        <div id="sidebar">
+            <div class="header">
+                
+                <a class="left" href="?">Lecciones</a>
+                <img class="img" src="img/logo.png" width="20%">
+                <!--<a class="right" href="?"><i class="fas fa-plus"></i></a>-->
+            </div>
+            <div class="content">
+                <ul class="nav">
+                    <li class="field-container">
+                       
+                          <fieldset class="">
+                            <input type="text" placeholder="Buscar..." class="field" id="input-search"/>
+                            <div class="icons-container">
+                              <div class="icon-search"></div>
+                              <div class="icon-close">
+                                <div class="x-up"></div>
+                                <div class="x-down"></div>
+                              </div>
+                            </div>
+                          </fieldset>
+                         
+                    </li>
+                </ul>
+                <ul class="nav">
+                    <a href="?" class="title-leccion">LECCIÓN 1</a>
+                    <li><a href="?"><span class=""><i class="fas fa-plus"></i></span>Normal item</a></li>
+                    <li><a href="?" class="active"><span class=""><i class="fas fa-plus"></i></span>Active section</a></li>
+                    <li><a href="?"><span class=""></span>Red circle<span class="info">5</span></a></li>
+                    <li><a href="?"><span class=""></span>Status indicator <span>On</span></a></li>
+                    <li><a href="?"><span class=""></span>Normal item</a></li>
+                </ul>
+                <ul class="nav">
+                    <a href="?" class="title-leccion">LECCIÓN 2</a>
+                    <li><a href="?"><span class=""><i class="fas fa-plus"></i></span>Normal item</a></li>
+                    <li><a href="?" class="active"><span class=""><i class="fas fa-plus"></i></span>Active section</a></li>
+                    <li><a href="?"><span class=""></span>Red circle<span class="info">5</span></a></li>
+                    <li><a href="?"><span class=""></span>Status indicator <span>On</span></a></li>
+                    <li><a href="?"><span class=""></span>Normal item</a></li>
+                </ul>
+                <ul class="nav">
+                    <a href="?" class="title-leccion">LECCIÓN 3</a>
+                    <li><a href="?"><span class=""><i class="fas fa-plus"></i></span>Normal item</a></li>
+                    <li><a href="?" class="active"><span class=""><i class="fas fa-plus"></i></span>Active section</a></li>
+                    <li><a href="?"><span class=""></span>Red circle<span class="info">5</span></a></li>
+                    <li><a href="?"><span class=""></span>Status indicator <span>On</span></a></li>
+                    <li><a href="?"><span class=""></span>Normal item</a></li>
+                </ul>
+                <ul class="nav">
+                    <a href="?" class="title-leccion">LECCIÓN 4</a>
+                    <li><a href="?"><span class=""><i class="fas fa-plus"></i></span>Normal item</a></li>
+                    <li><a href="?" class="active"><span class=""><i class="fas fa-plus"></i></span>Active section</a></li>
+                    <li><a href="?"><span class=""></span>Red circle<span class="info">5</span></a></li>
+                    <li><a href="?"><span class=""></span>Status indicator <span>On</span></a></li>
+                    <li><a href="?"><span class=""></span>Normal item</a></li>
+                </ul>
+                
+            </div>
+        </div>
+        <div id="main">
+            <div class="header">
+                <a class="left" href="javascript:history.back()"><i class="fas fa-arrow-left"></i></a>
+                <h1 class="title" id="titleSection">PERFIL</h1>
+                <a class="right" href="perfil.html"><i class="far fa-user"></i></a>
+            </div>
+            <div class="content" id="content">
+               
+                <h2 class="title2">Detalle Perfil</h2>
+                <p>A continuación serán detallados sus datos</p>
+                <div class="box-white">
+                    <center><img src="img/logo-login.png"></center>
+                    <p><label for="field1">Nombre</label><input id="field1" type="text" value="victor@gmail.com" /></p>
+                    <p><label for="field2">Correo</label><input id="field2" type="password" value="12345678" /></p>
+                    <p><label for="field3">Telefono</label><input id="field3" type="text" value="1234567899" /></p>
+                    <p><label for="field4">Fecha Alta</label><input id="field4" type="text" value="2020-10-24 09:41:47" /></p>
+                    <p><label for="field5">Tipo Cuenta</label><select id="field5"><option>Gratis</option><option>Pago</option></select></p>
+                    <p><label for="field6">Contraseña</label><input id="field6" type="password" value="n0J3wpZ6Ufjq5B8ht/26Tg==" /></p>
+                </div>
+                <p><input type="submit" class="button blue" value="Eliminar perfil" /></p>
+            </div>
+        </div>
+
+    </div>
+        <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript" src="js/all.min.js"></script>
+        <script type="text/javascript" src="js/sweetalert.min.js"></script>
+        <script type="text/javascript" src="js/auth.js"></script>
+        <!--<script type="text/javascript" src="js/touch-emulator.js"></script>-->
+        <!--<script>TouchEmulator()</script>-->
+        <script type="text/javascript" src="js/pulltorefresh.js"></script>
+        <script>
+      /* global PullToRefresh */
+      PullToRefresh.init({
+        mainElement: '#content',
+        onRefresh: function() { alert('refresh') }
+      });
+     
+    </script>
+</body>
+
+</html>

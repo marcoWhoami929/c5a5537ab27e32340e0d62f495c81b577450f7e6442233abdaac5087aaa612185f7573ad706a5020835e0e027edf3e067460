@@ -1,6 +1,6 @@
 {
-  "name": "FlyTestApp",
-  "short_name": "FlyTestApp",
+  "name": "FLIGHT-TEST",
+  "short_name": "FLIGHT-TEST",
   "description": "Description of your app from template",
   "start_url": "index.html",
   "scope": "index.html",

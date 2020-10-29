@@ -7,88 +7,153 @@
     <meta name="msapplication-tap-highlight" content="no">
     <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
     <link rel="stylesheet" href="css/all.min.css">
     <link rel="stylesheet" href="css/animate.css">
-    <title>FLY-TEST</title>
+    <title>FLIGHT-TEST</title>
+    <script type="text/javascript">
+        var url = window.location.pathname;
+        var filename = url.substring(url.lastIndexOf('/') + 1);
+        if (localStorage.login == "true" && filename == 'login.html') {
+            window.location.href = "index.html";
+        } else if (localStorage.login == null) {
+            window.location.href = "login.html";
+        } else if (localStorage.login == "false" && filename != 'login.html') {
+            window.location.href = "login.html";
+        }
+        </script>
 </head>
 
 <body>
     <div id="wrap">
         <div id="sidebar">
             <div class="header">
-                <p class="title">FLY-TEST</p>
+                
+                <a class="left" href="?">Lecciones</a>
+                <img class="img" src="img/logo.png" width="20%">
+                 <!--<a class="right" href="?"><i class="fas fa-plus"></i></a>-->
             </div>
-            <div class="content">
+            <div class="content" >
+                
                 <ul class="nav">
-                    <li><a href="?"><span class="ico msg"></span>Normal item</a></li>
-                    <li><a href="?" class="active"><span class="ico msg"></span>Active section</a></li>
-                    <li><a href="?"><span class="ico msg"></span>Red circle<span class="info">5</span></a></li>
-                    <li><a href="?"><span class="ico msg"></span>Status indicator <span>On</span></a></li>
+                    <li class="field-container">
+                       
+                          <fieldset class="">
+                            <input type="text" placeholder="Buscar..." class="field" id="input-search"/>
+                            <div class="icons-container">
+                              <div class="icon-search"></div>
+                              <div class="icon-close">
+                                <div class="x-up"></div>
+                                <div class="x-down"></div>
+                              </div>
+                            </div>
+                          </fieldset>
+                         
+                    </li>
                 </ul>
+                <div id="listaLecciones">
+                  
+                </div>
+            
+                
             </div>
         </div>
         <div id="main">
             <div class="header">
-                <a class="left" href="?">Volver</a>
-                <h1 class="title">Title</h1>
-                <a class="right" href="?">Edit</a>
+                <a class="left" href="?"><i class="fas fa-arrow-left"></i></a>
+                <h1 class="title" id="titleSection">DASHBOARD</h1>
+                <a class="right" href="perfil.html"><i class="far fa-user"></i></a>
             </div>
             <div class="content" id="content">
-                <h2 class="title">Heading first</h2>
+                <h2 class="title">Bienvenido a este curso</h2>
+                
                 <div class="box-white">
-                    <p>Lorem ipsum <span class="detail">Details here</span><span>Dolor</span></p>
+                    <p>Detalles</p>
+                    <p><span class="detail">FLIGHT-TEST es una aplicación de aprendizaje y capacitación sobre aviación.</span></p>
                 </div>
-                <h2 class="title2">Heading second</h2>
-                <p>This is a normal paragraph to add any text you like.</p>
-                <div class="box-white">
-                    <p>Parameter <span>Value</span></p>
-                    <p><a href="?">Clickable row<span>Click me <span class="arrow">&gt;</span></span></a></p>
-                    <p>Foo <span>Bar</span></p>
-                    <p>Lorem ipsum <span><a href="?">Click only this</a></span></p>
-                </div>
+                <h2 class="title2">Mi Progreso</h2>
+                <p>A continuación será detallado el progreso en cada una de las lecciones asignadas.</p>
+                <main>
+                    <div class="main-content">
+                  
+                      <div id="example-3" class="examples">
+                     
+                        <div class="cssProgress">
+                          <div class="progress3">
+                            <div class="cssProgress-bar" data-percent="75" style="width: 75%;">
+                              <span class="cssProgress-label">75%</span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="cssProgress">
+                          <div class="progress3">
+                            <div class="cssProgress-bar cssProgress-info" data-percent="65" style="width: 65%;">
+                              <span class="cssProgress-label">65%</span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="cssProgress">
+                          <div class="progress3">
+                            <div class="cssProgress-bar cssProgress-danger" data-percent="55" style="width: 55%;">
+                              <span class="cssProgress-label">55%</span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="cssProgress">
+                          <div class="progress3">
+                            <div class="cssProgress-bar cssProgress-success" data-percent="45" style="width: 45%;">
+                              <span class="cssProgress-label">45%</span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="cssProgress">
+                          <div class="progress3">
+                            <div class="cssProgress-bar cssProgress-warning" data-percent="35" style="width: 35%;">
+                              <span class="cssProgress-label">35%</span>
+                            </div>
+                          </div>
+                        </div>
+                        <!--<span class="btn btn-primary progressStart">Start</span> &nbsp;&nbsp; <span class="btn btn-primary progressReset">Reset</span>-->
+                      </div>
+                    </div>
+                  </main><!-- @end main -->
+                <h2 class="title2">Mi Progreso</h2>
                 <table>
                     <thead>
                         <tr>
-                            <th>Table heading</th>
-                            <th>Tweets</th>
-                            <th>Following</th>
-                            <th>Followers</th>
+                            <th>LECCIÓN</th>
+                            <th>ACERTADAS</th>
+                            <th>ERRONEAS</th>
+                            <th>PENDIENTES</th>
+                            <th>CALIFICACION</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td><a href="?">@xaviesteve</a></td>
-                            <td><a href="?">Click</a></td>
-                            <td>131</td>
-                            <td>195</td>
+                            <td>LECCIÓN 1</td>
+                            <td>1</td>
+                            <td>0</td>
+                            <td>2</td>
+                            <td>30%</td>
                         </tr>
                         <tr>
-                            <td>@xaviesteve</td>
-                            <td>622</td>
-                            <td><a href="?">Click</a></td>
-                            <td>195</td>
+                            <td>LECCIÓN 2</td>
+                            <td>1</td>
+                            <td>0</td>
+                            <td>2</td>
+                            <td>30%</td>
                         </tr>
                         <tr>
-                            <td>@xaviesteve</td>
-                            <td>622</td>
-                            <td>131</td>
-                            <td><a href="?">Click</a></td>
+                            <td>LECCIÓN 3</td>
+                            <td>1</td>
+                            <td>0</td>
+                            <td>2</td>
+                            <td>30%</td>
                         </tr>
+                       
                     </tbody>
                 </table>
-                <p class="note">You can follow me on Twitter for updates on this template at <a href="https://www.twitter.com/xaviesteve">@xaviesteve</a>.</p>
-                <h2 class="title">Heading first</h2>
-                <div class="box-white">
-                    <p class="center">Centered text in a white box</p>
-                </div>
-                <h2 class="title2">Account details</h2>
-                <p>Me got forms too:</p>
-                <div class="box-white">
-                    <p><label for="field1">Apple ID</label><input id="field1" type="text" value="xavi@example.com" /></p>
-                    <p><label for="field2">Password</label><input id="field2" type="password" value="xavixavi" /></p>
-                    <p><label for="field3">Country</label><select id="field3"><option>Spain</option><option>United Kingdom</option></select></p>
-                </div>
-                <p><input type="submit" class="button red" value="Delete Account" /></p>
+ 
             </div>
         </div>
 
@@ -97,15 +162,64 @@
         <script type="text/javascript" src="js/index.js"></script>
         <script type="text/javascript" src="js/all.min.js"></script>
         <script type="text/javascript" src="js/sweetalert.min.js"></script>
+        <script type="text/javascript" src="js/auth.js"></script>
+        <!--
         <script type="text/javascript" src="js/touch-emulator.js"></script>
         <script>TouchEmulator()</script>
+        -->
         <script type="text/javascript" src="js/pulltorefresh.js"></script>
         <script>
       /* global PullToRefresh */
       PullToRefresh.init({
         mainElement: '#content',
-        onRefresh: function() { alert('refresh') }
+        onRefresh: function() { 
+
+            var idUsuario = 1;
+                var dataString = "idUsuario=" + idUsuario + "&listaMenu=";
+                $.ajax({
+                type: "POST",
+                url: "http://192.168.1.245/flight-admin/api-flight-connect.php?callback=?",
+                data: dataString,
+                crossDomain: true,
+                cache: false,
+                success: function(data) {
+                    if (data != "failed") {
+                    localStorage.listaMenu = data;
+                    var url = window.location.pathname;
+                    var filename = url.substring(url.lastIndexOf('/') + 1);
+                    
+                    window.location.href = ""+filename+"";
+                 
+                    }
+                }
+                })
+
+
+        }
       });
+     
+    </script>
+    <script type="text/javascript">
+        
+            $(document).ready(function(){
+                var json = localStorage.listaMenu;
+                        var types = JSON.parse(json);
+                        $("#listaLecciones").html("");
+                        for (x = 0; x < types.length; x++) {
+        
+                                var ul =  `<ul class="nav">
+                                    <a href="?" class="title-leccion">`+types[x].nombre+` <span class="info">`+types[x].cantidadPreguntas+`</span></a>
+                                    <li><a href="?"><span class=""><i class="fas fa-stopwatch"></i></span>Normal item</a></li>
+                                    <li><a href="?" class="active"><span class=""><i class="fas fa-stopwatch"></i></span>Active section</a></li>
+                                    <li><a href="?"><span class=""><i class="fas fa-stopwatch"></i></span>Normal item</a></li>
+                                    <li><a href="?"><span class=""><i class="fas fa-stopwatch"></i></span>Normal item</a></li>
+                                    <li><a href="?"><span class=""><i class="fas fa-stopwatch"></i></span>Normal item</a></li>
+                                </ul>`;
+                            
+                            $("#listaLecciones").append(ul);
+                            
+                        }
+            });
     </script>
 </body>
 

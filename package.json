@@ -1,8 +1,8 @@
 {
-    "name": "com.fly.test",
-    "displayName": "FlyTestApp",
+    "name": "com.flight.test",
+    "displayName": "FLIGHT-TEST",
     "version": "1.0.0",
-    "description": "A sample Apache Cordova application that responds to the deviceready event.",
+    "description": "Cursos de Aviación.",
     "main": "index.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1"

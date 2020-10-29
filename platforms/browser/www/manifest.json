@@ -1,9 +1,9 @@
 {
   "background_color": "#FFF",
   "display": "standalone",
-  "name": "FlyTestApp",
-  "short_name": "FlyTestApp",
-  "version": "com.fly.test",
+  "name": "FLIGHT-TEST",
+  "short_name": "FLIGHT-TEST",
+  "version": "com.flight.test",
   "description": "CURSOS DE AVIACIÓN",
   "author": "Marco Antonio López Pérez",
   "icons": [],

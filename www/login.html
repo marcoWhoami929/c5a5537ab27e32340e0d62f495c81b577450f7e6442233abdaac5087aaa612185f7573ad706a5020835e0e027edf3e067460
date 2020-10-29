@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/login.css">
+    <title>FLIGHT-TEST</title>
+    <script type="text/javascript">
+        var url = window.location.pathname;var filename = url.substring(url.lastIndexOf('/')+1);
+        if(localStorage.login=="true" && filename == 'login.html'){window.location.href = "index.html";}
+        else if(localStorage.login=="false" && filename != 'login.html'){window.location.href = "login.html";}
+        </script>
+</head>
+
+<body>
+    <div class="container">
+        <div class="top"></div>
+        <div class="bottom"></div>
+        <div class="center">
+            <div class="header-login">
+                <img src="img/logo-login.png">
+            </div>
+      
+       
+            <input type="email" placeholder="Correo electrónico" id="emailUser">
+            <input type="password" placeholder="Contraseña" id="passwordUser">
+            
+            <button class="btnAcceso" id="btnAcceso">Acceder</button>
+            
+        </div>
+        
+      </div>
+    
+        <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript" src="js/all.min.js"></script>
+        <script type="text/javascript" src="js/auth.js"></script>
+        <script type="text/javascript" src="js/sweetalert.min.js"></script>
+       
+</body>
+
+</html>
