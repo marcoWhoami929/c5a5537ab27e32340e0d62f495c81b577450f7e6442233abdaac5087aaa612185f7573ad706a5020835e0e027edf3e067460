@@ -35,9 +35,9 @@
             </div>
             <div class="content" >
                 
-                <ul class="nav">
+                  <ul class="nav">
                     <li class="field-container">
-                       
+                      
                           <fieldset class="">
                             <input type="text" placeholder="Buscar..." class="field" id="input-search"/>
                             <div class="icons-container">
@@ -48,7 +48,7 @@
                               </div>
                             </div>
                           </fieldset>
-                         
+                        
                     </li>
                 </ul>
                 <div id="listaLecciones">
@@ -59,11 +59,7 @@
             </div>
         </div>
         <div id="main">
-            <div class="header">
-                <a class="left" href="?"><i class="fas fa-arrow-left"></i></a>
-                <h1 class="title" id="titleSection">DASHBOARD</h1>
-                <a class="right" href="perfil.html"><i class="far fa-user"></i></a>
-            </div>
+            <div id="headers"></div>
             <div class="content" id="content">
                 <h2 class="title">Bienvenido a este curso</h2>
                 
@@ -156,7 +152,7 @@
  
             </div>
         </div>
-
+        
     </div>
         <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
@@ -221,6 +217,7 @@
                         }
             });
     </script>
+    <script>$("#headers").load("http://127.0.0.1:5500/www/header.html")</script> 
 </body>
 
 </html>
